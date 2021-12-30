@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Project 5</title>
+    <link rel="stylesheet" href="style5.css" />
+  </head>
+  <body>
+    <div class="text">
+      <h1>Code With Abhishek</h1>
+    
+    <div class="bg"></div>
+    <div class="loading-text"></div>
+  </div>   
+    
+    <script>
+     
+
+        const bg = document.querySelector(".bg"); //.bg it refer from css classname
+        const loadText = document.querySelector(".loading-text"); //.loading-text it refer from css classname
+        let load = 0;
+        let int = setInterval(blurring, 30);
+        function blurring() {
+         load++;
+         if (load > 99) {
+          setInterval(int);
+         }
+
+         loadText.innerText = `${load}%`;
+         loadText.style.opacity = scale(load, 0, 100, 1, 0);
+         bg.style.filter = `blur(${scale(load, 0, 100, 30, 0)}px)`;
+        
+        
+        }
+        
+        const scale = (num, in_min, in_max, out_min, out_max) => {
+        return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+
+         };
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 4</title>
+    <link rel="stylesheet" type="text/css" href="style4.css">
+</head>
+<body>
+ <div class="search" onclick= "document.getElementById('go').value=''" > 
+        
+        <div class="icon">  </div>
+            <div class="input">
+                <input type="text" placeholder="Type here.. " id="go">
+            </div>
+      
+    </div>
+    <script>
+        const icon = document.querySelector(".icon");
+        const search =document.querySelector(".search");
+        //classList means  DOM property of JavaScript that allows for styling the CSS  classes of an element.
+        icon.onclick =function (){
+            search.classList.toggle('active') // toggle: removes an existing token from the list and returns false
+        }
+    </script>
+</body>
+</html>
