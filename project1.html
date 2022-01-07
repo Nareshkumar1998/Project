@@ -9,28 +9,39 @@
 <body>
 
     <div class="container">
-        <div class="contain" id="photo" onclick=" document.getElementById('photo').style.width='500%'">
-            <img src="./images/milky-way.jpg" alt="" class="img">
-        </div>
-        <div class="contain" id="photo1"  onclick=" document.getElementById('photo1').style.width='800%'" >
-            <img src="./images/wall 4.jpg" alt="" class="img">
-        </div>
-        <div class="contain" id="photo2"  onclick=" document.getElementById('photo2').style.width='700%'">
-            <img src="./images/white tree.jpg" alt="" class="img">
-        </div>
-        <div class="contain" id="photo3" onclick=" document.getElementById('photo3').style.width='700%'">
-            <img src="./images/pic1.jpg" alt="" class="img">
-        </div>
-        <div class="contain" id="photo4"  onclick=" document.getElementById('photo4').style.width='700%'" >
-            <img src="./images/wall 4.jpg" alt="" class="img">
-        </div>
-        <div class="contain" id="photo5"  onclick=" document.getElementById('photo5').style.width='800%'">
-            <img src="./images/white tree.jpg" alt="" class="img">
-        </div>
-        
-    </div>
+     
+          <div class="box active" style="background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');" >
+            <h3>Explore the world</h3>
+           </div>
+           <div class="box " style=" background: url('https://www.whatsappimages.in/wp-content/uploads/2021/01/Boys-Feeling-Very-Sad-Images-Pics-Downlaod.jpg') " width='40px'>
+            <h3>Explore the world</h3>
+           </div>
+          <div class="box " style="background: url('https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');" >
+              <h3>Explore the world</h3>
+           </div>
+          <div class="box "  style=" background: url('./images/pic3.jpeg');">
+            <h3>Explore the world</h3>
+          </div>
+     </div>         
 
-    
+
+    <script>
+        const box = document.querySelectorAll('.box');
+       box.forEach(box =>{
+        box.addEventListener('click',()=> {
+            removeActiveClasses();
+            box.classList.add("active");
+           
+        })
+       })
+       function removeActiveClasses(){
+           box.forEach(box =>{
+               box.classList.remove("active")
+           })
+
+       }
+       
+    </script>
 </body>
 
 </html>
